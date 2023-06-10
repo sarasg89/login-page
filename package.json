@@ -1,7 +1,7 @@
 {
   "name": "mern-login",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample code for login, signup and user profile pages",
   "main": "server/server.js",
   "scripts": {
     "start": "node server --ignore client",
@@ -10,15 +10,23 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": ["sample code", "react", "redux", "express", "mongodb", "login"],
+  "keywords": [
+    "sample code",
+    "react",
+    "redux",
+    "express",
+    "mongodb",
+    "login"
+  ],
   "author": "Sara Seoane Garcia",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
     "fabric": "^5.3.0",
-    "react-redux": "^8.0.7"
+    "jwt-decode": "^3.1.2",
+    "react-redux": "^8.0.7",
+    "react-router-dom": "^6.12.1"
   }
 }

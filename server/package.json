@@ -1,30 +1,36 @@
 {
   "name": "mern-login",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample code for login, signup and user profile pages",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
     "seed": "node config/seeds.js"
   },
-  "keywords": ["sample code", "react", "redux", "express", "mongodb", "login"],
+  "keywords": [
+    "sample code",
+    "react",
+    "redux",
+    "express",
+    "mongodb",
+    "login"
+  ],
   "author": "Sara Seoane Garcia",
   "license": "MIT",
   "dependencies": {
-    "apollo-server-express": "^3.6.2",
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.2",
-    "graphql": "^16.3.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^7.0.2",
     "@emailjs/browser": "^3.11.0",
     "@emailjs/nodejs": "^2.2.0",
-    "dotenv": "^16.0.3",
-    "nodemon": "^2.0.4",
-    "stripe": "^8.67.0"
+    "apollo-server-express": "^3.12.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.3",
+    "stripe": "^12.9.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.22"
   }
 }
