@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { LOGIN } from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 
-function Login(props) {
+function Login() {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
 
@@ -68,6 +68,6 @@ function Login(props) {
             </div>
         </div>
     );
-}
+};
 
 export default Login;

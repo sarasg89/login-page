@@ -8,20 +8,20 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Layout from './components/Layout';
-import Login from './pages/Login/Login';
-import Logout from './pages/Logout/Logout';
-import Signup from './pages/Signup/Signup';
-import Profile from './pages/Profile/Profile';
-import Home from './pages/Home/Home';
-
-import { StoreProvider } from './utils/GlobalState';
 import './App.css';
+
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+import Profile from './pages/Profile';
+import Signup from './pages/Signup';
+import Layout from './components/Layout';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
+// This middleware will attach the token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -53,22 +53,17 @@ function App() {
       <Router>
         <ScrollToTop />
         <>
-          <StoreProvider>
             <Routes>
 
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/profile" element={<Profile />} />
-                />
-              </Route>
               <Route path="*" element={<Home />} />
-
+              </Route>
             </Routes>
-          </StoreProvider>
         </>
       </Router>
     </ApolloProvider>

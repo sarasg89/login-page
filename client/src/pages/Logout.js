@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Auth from "../../utils/auth";
+import Auth from "../utils/auth";
+
 
 function Logout() {
     const navigate = useNavigate();
@@ -20,6 +21,6 @@ function Logout() {
             </div>
         </div>
     )
-}
+};
 
 export default Logout;
