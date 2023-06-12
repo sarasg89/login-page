@@ -13,6 +13,9 @@ import {
   faRightFromBracket,
   faGaugeHigh,
   faUser,
+  faEnvelope,
+  faKey,
+  faDeleteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Profile() {
@@ -120,17 +123,35 @@ function Profile() {
             <aside>
               <TabList>
                 <Tab>
-                  <p>
-                    <span>
-                      <FontAwesomeIcon icon={faGaugeHigh} color="#343131" />
-                    </span>
-                    Dashboard
-                  </p>
+                  <span>
+                    <FontAwesomeIcon icon={faGaugeHigh} color="#343131" />
+                  </span>
+                  Dashboard
                 </Tab>
-                <Tab>Change your name</Tab>
-                <Tab>Change your email</Tab>
-                <Tab>Change your password</Tab>
-                <Tab>Delete your account</Tab>
+                <Tab>
+                  <span>
+                    <FontAwesomeIcon icon={faUser} color="#343131" />
+                  </span>
+                  Change your name
+                </Tab>
+                <Tab>
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} color="#343131" />
+                  </span>
+                  Change your email
+                </Tab>
+                <Tab>
+                  <span>
+                    <FontAwesomeIcon icon={faKey} color="#343131" />
+                  </span>
+                  Change your password
+                </Tab>
+                <Tab>
+                  <span>
+                    <FontAwesomeIcon icon={faDeleteLeft} color="#343131" />
+                  </span>
+                  Delete your account
+                </Tab>
                 <Tab onClick={() => navigate("/logout")}>
                   <p onClick={() => navigate("/logout")}>
                     <span>
